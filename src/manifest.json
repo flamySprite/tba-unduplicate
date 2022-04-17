@@ -1,0 +1,39 @@
+{
+    "manifest_version": 2,
+    "name": "don't receive the same email again",
+    "description": "Trashes duplicates on receive",
+    "version": "1.0",
+    "author": "flamy",
+    "applications": {
+        "gecko": {
+            "id": "flamy.dev@public-files.de",
+            "strict_min_version": "91.0"
+        }
+    },
+    "browser_action": {
+        "default_popup": "mainPopup/popup.html",
+        "default_title": " ",
+        "default_icon": "images/icon_unrecv_64px.png"
+    },
+    "permissions": [
+        "messagesRead",
+        "messagesMove",
+        "accountsRead",
+        "storage",
+        "menus",
+        "notifications"
+    ],
+    "background": {
+        "page": "background.html"
+    },
+    "options_ui": {
+        "page": "options/options.html",
+        "open_in_tab": false,
+        "browser_style": true
+    },
+    "icons": {
+        "64": "images/icon_unrecv_64px.png",
+        "32": "images/icon_unrecv_32px.png",
+        "16": "images/icon_unrecv_16px.png"
+    }
+}
